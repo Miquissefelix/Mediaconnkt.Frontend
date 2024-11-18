@@ -1,0 +1,120 @@
+<button style="  margin-bottom: 10px;" [cModalToggle]="verticallyCenteredModal.id" cButton class="modal1-button" >
+  <svg [cIcon]="icons.cilDevices" size="lg" title="List Icon"></svg>
+ Add Device
+</button>
+
+
+<table cTable [cBorder]="1" bordered >
+  <thead cTableColor="dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Serial Number</th>
+    <th scope="col">Current Route</th>
+    <th scope="col">Status</th>
+    
+    <th scope="col">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td scope="row">1</td>
+    <td>Mark</td>
+    <td>34562765</td>
+    <td>Pretoria</td>
+    <td>Active</td>
+    <td>
+      <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
+      <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
+     
+    </td>
+   
+  </tr>
+  <tr>
+    <td scope="row">2</td>
+    <td>Jacob</td>
+    <td>6437653425</td>
+    <td>Gauteng</td>
+    <td>Inactive</td>
+    <td>
+      <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
+      <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
+     
+    </td>
+  </tr>
+  <tr>
+    <td scope="row">3</td>
+    <td>Larry</td>
+    <td>85766534</td>
+    <td>Pretoria</td>
+    <td>Active</td>
+    <td>
+      <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
+      <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
+     
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+<!-- form -->
+
+<c-modal #verticallyCenteredModal alignment="center" id="verticallyCenteredModal" >
+  <c-modal-header>
+    <h5 cModalTitle>Add New Device</h5>
+    <button [cModalToggle]="verticallyCenteredModal.id" cButtonClose></button>
+  </c-modal-header>
+  <c-modal-body>
+    <form  cForm class="row g-3" ngNativeValidate>
+      <!-- Nome da Campanha -->
+      <c-col [md]="12">
+        <label cLabel for="campaignName">Device Name</label>
+        <input
+          cFormControl
+          id="campaignName"
+          type="text"
+          name="campaignName"
+          required="true"
+          placeholder="Device Name"
+        />
+      </c-col>
+<!-- sserial number -->
+      <c-col [md]="12">
+        <label cLabel for="campaignName">Serial Number</label>
+        <input
+          cFormControl
+          id="campaignName"
+          type="text"
+          name="campaignName"
+          required="true"
+          placeholder="Serial Number"
+        />
+      </c-col>
+      
+      <!-- Rota Associada -->
+      <c-col [md]="12">
+        <label cLabel for="route">Atual Route</label>
+        <select cSelect id="route" name="route" required="true">
+          <option value="" disabled selected>Choose a route...</option>
+          <!-- Supondo que há uma lista de rotas no controlador -->
+          <option>Pretoria</option>
+          <option>Gauteng</option>
+        </select>
+      </c-col>
+
+   
+      <!-- Botões de Ação -->
+      <c-modal-footer>
+        <button [cModalToggle]="verticallyCenteredModal.id" cButton color="secondary" >
+          Close
+        </button>
+        <button cButton color="primary" class="modal1-button" type="submit">
+          <svg [cIcon]="icons.cilSave" size="lg" title="List Icon"></svg>
+          Save
+        </button>
+      </c-modal-footer>
+    </form>
+  </c-modal-body>
+</c-modal>

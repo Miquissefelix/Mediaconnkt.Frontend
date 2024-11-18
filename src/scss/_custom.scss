@@ -1,0 +1,98 @@
+// Here you can add other styles
+
+// custom .chartjs-tooltip-body-item padding
+@import "charts";
+
+// custom tweaks for scrollbar styling (wip)
+@import "scrollbar";
+
+
+
+ // custom calendar today cell color
+.calendar-cell.today {
+  --cui-calendar-cell-today-color: var(--cui-info) !important;
+}
+
+// custom select week cursor pointer
+.select-week .calendar-row.current {
+  cursor: pointer;
+}
+
+/* Sidebar - Títulos e Links */
+.sidebar-nav .nav-title, 
+.sidebar-nav .nav-link {
+  color: #fff; 
+}
+
+/* Ícones da Sidebar */
+.sidebar-nav svg.nav-icon {
+  color: #fff;
+}
+
+/* Link Ativo - Destaque em Vermelho */
+.sidebar-nav .nav-link.active .nav-icon,
+.sidebar-nav .nav-link.active {
+  font-weight: bold; 
+  color: #ff0000; 
+}
+
+/* Hover nos Links */
+.sidebar-nav .nav-link:hover {
+  color: #ff0000; 
+  font-weight: bold; 
+}
+
+/* Fundo da Sidebar */
+.sidebar.sidebar-fixed {
+  background-color: #0a0a0af8; 
+}
+
+/* Header da Sidebar */
+.sidebar .sidebar-header {
+  background-color: #ff0000; 
+  color: #fff; 
+  border-bottom: 2px solid #000;
+}
+
+/* Footer da Sidebar */
+.sidebar .sidebar-footer {
+  background-color: #0a0a0af8; 
+  color: #fff; 
+}
+
+/* Botão Toggle da Sidebar */
+button.c-sidebar-toggler {
+  background-color: #ff0000; 
+  color: #fff; 
+  border: none;
+}
+
+
+
+
+
+
+
+.btn-primary{
+  background-color: #ff0000; 
+  color: #ffffff; 
+  border: none;
+}
+.btn-primary:hover{
+  background-color: #ffffff; 
+  color: #ff0000; 
+  border: 1px solid #ff0000; 
+}
+
+
+
+/* Cabeçalho da tabela */
+.table th {
+  border-color: #ff0000;
+  background-color: #ff0000; 
+
+}
+
+
+
+

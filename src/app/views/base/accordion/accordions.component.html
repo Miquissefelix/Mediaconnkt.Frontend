@@ -1,0 +1,151 @@
+<button style="margin-bottom: 10px;" [cModalToggle]="verticallyCenteredModal.id" cButton class="modal1-button" >
+  <svg [cIcon]="icons.cilLocationPin" size="lg" title="List Icon"></svg>
+ Add Routes
+</button>
+
+
+<table cTable [cBorder]="1" bordered >
+  <thead cTableColor="dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Status</th>
+    <th scope="col">Devices</th>
+    <th scope="col">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td scope="row">1</td>
+    <td>Mark</td>
+    <td>Active</td>
+    <td>
+      <a
+      routerLink="/base/breadcrumbs"
+      cButton
+      color="primary"
+      class="select-btn me-md-2 modal1-button"
+ 
+    >
+      <svg
+        [cIcon]="icons.cilDevices"
+        size="sm"
+        title="Open Location"
+      ></svg>
+      Views Devices
+    </a>
+  </td>
+ 
+    <td>
+      <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
+      <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
+     
+    </td>
+   
+  </tr>
+  <tr>
+    <td scope="row">2</td>
+    <td>Jacob</td>
+    <td>Inactive</td>
+    <td>
+      <a
+      routerLink="/base/breadcrumbs"
+      cButton
+      color="primary"
+      class="select-btn me-md-2 modal1-button"
+ 
+    >
+      <svg
+      routerLink="/base/breadcrumbs"
+        [cIcon]="icons.cilDevices"
+        size="sm"
+        title="Open Location"
+      ></svg>
+      Views Devices
+    </a>
+  </td>
+    <td>
+      <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
+      <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
+     
+    </td>
+  </tr>
+  <tr>
+    <td scope="row">3</td>
+    <td>Larry</td>
+    <td>Active</td>
+    <td>
+      <a
+ 
+      cButton
+      color="primary"
+      class="select-btn me-md-2 modal1-button"
+ 
+    >
+      <svg
+        [cIcon]="icons.cilDevices"
+        size="sm"
+        title="Open Location"
+      ></svg>
+      Views Devices
+    </a>
+  </td>
+    <td>
+      <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
+      <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
+     
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+<!-- form -->
+
+<c-modal #verticallyCenteredModal alignment="center" id="verticallyCenteredModal" >
+  <c-modal-header>
+    <h5 cModalTitle>Add New Route</h5>
+    <button [cModalToggle]="verticallyCenteredModal.id" cButtonClose></button>
+  </c-modal-header>
+  <c-modal-body>
+    <form  cForm class="row g-3" ngNativeValidate>
+      <!-- Nome da Campanha -->
+      <c-col [md]="12">
+        <label cLabel for="campaignName">Route Name</label>
+        <input
+          cFormControl
+          id="campaignName"
+          type="text"
+          name="campaignName"
+          required="true"
+          placeholder="Device Name"
+        />
+      </c-col>
+   <!-- Descrição -->
+   <c-col [md]="12">
+    <label cLabel for="description">Description</label>
+    <textarea
+      cFormControl
+      id="description"
+      name="description"
+      required="true"
+      placeholder="Digite uma breve descrição da campanha"
+    ></textarea>
+  </c-col>
+  
+
+   
+      <!-- Botões de Ação -->
+      <c-modal-footer>
+        <button [cModalToggle]="verticallyCenteredModal.id" cButton color="secondary" >
+          Close
+        </button>
+        <button cButton color="primary" class="modal1-button" type="submit">
+          <svg [cIcon]="icons.cilSave" size="lg" title="List Icon"></svg>
+          Save
+        </button>
+      </c-modal-footer>
+    </form>
+  </c-modal-body>
+</c-modal>
