@@ -3,15 +3,215 @@
   Create campaign
 </button>
 
+<c-tabs class="tabbutton" [activeItemKey]="'allCampaigns'" >
+  <c-tabs-list class="tablist" variant="tabs">
+    <button class="active" cTab itemKey="allCampaigns">All Campaigns</button>
+    <button cTab itemKey="activeCampaigns">Active Campaigns</button>
+    <button cTab itemKey="pastCampaigns">Past Campaigns</button>
+  </c-tabs-list>
 
-<table cTable [cBorder]="1" bordered >
+  <c-tabs-content>
+    <!-- Todas as Campanhas -->
+    <c-tab-panel class="p-3" itemKey="allCampaigns">
+      <h3>All Campaigns</h3>
+      <table cTable [cBorder]="1" bordered hover striped class="styled-table">
+        <thead cTableColor="dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Link</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Campanhas Listadas Aqui -->
+          <tr>
+            <td scope="row">1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>http:media.Otto</td>
+           <td class="status active">Active</td>
+      <td class="actions">
+        <svg [cIcon]="icons.cilPencil" size="lg" title="Edit"></svg>
+        <svg [cIcon]="icons.cilTrash" size="lg" title="Delete"></svg>
+      </td>
+          </tr>
+          <!-- Mais campanhas podem ser listadas aqui -->
+          <tr>
+            <td scope="row">1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>http:media.Otto</td>
+           <td class="status active">Active</td>
+      <td class="actions">
+        <svg [cIcon]="icons.cilPencil" size="lg" title="Edit"></svg>
+        <svg [cIcon]="icons.cilTrash" size="lg" title="Delete"></svg>
+      </td>
+          </tr>
+
+          <tr>
+            <td scope="row">1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>http:media.Otto</td>
+            <td class="status inactive">Inactive</td>
+      <td class="actions">
+        <svg [cIcon]="icons.cilPencil" size="lg" title="Edit"></svg>
+        <svg [cIcon]="icons.cilTrash" size="lg" title="Delete"></svg>
+      </td>
+          </tr>
+          <tr>
+            <td scope="row">1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>http:media.Otto</td>
+            <td class="status inactive">Inactive</td>
+      <td class="actions">
+        <svg [cIcon]="icons.cilPencil" size="lg" title="Edit"></svg>
+        <svg [cIcon]="icons.cilTrash" size="lg" title="Delete"></svg>
+      </td>
+          </tr>
+          <tr>
+            <td scope="row">1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>http:media.Otto</td>
+            <td class="status inactive">Inactive</td>
+      <td class="actions">
+        <svg [cIcon]="icons.cilPencil" size="lg" title="Edit"></svg>
+        <svg [cIcon]="icons.cilTrash" size="lg" title="Delete"></svg>
+      </td>
+          </tr>
+          <tr>
+            <td scope="row">1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>http:media.Otto</td>
+            <td class="status inactive">Inactive</td>
+      <td class="actions">
+        <svg [cIcon]="icons.cilPencil" size="lg" title="Edit"></svg>
+        <svg [cIcon]="icons.cilTrash" size="lg" title="Delete"></svg>
+      </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </c-tab-panel>
+
+    <!-- Campanhas Ativas -->
+    <c-tab-panel class="p-3" itemKey="activeCampaigns">
+      <h3>Active Campaigns</h3>
+      <table cTable [cBorder]="1" bordered hover striped class="styled-table">
+        <thead cTableColor="dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Link</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Campanhas Ativas Listadas Aqui -->
+          <tr>
+            <td scope="row">1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>http:media.Otto</td>
+           <td class="status active">Active</td>
+      <td class="actions">
+        <svg [cIcon]="icons.cilPencil" size="lg" title="Edit"></svg>
+        <svg [cIcon]="icons.cilTrash" size="lg" title="Delete"></svg>
+      </td>
+          </tr>
+          <!-- Mais campanhas ativas -->
+        </tbody>
+      </table>
+    </c-tab-panel>
+
+    <!-- Campanhas Passadas -->
+    <c-tab-panel class="p-3" itemKey="pastCampaigns">
+      <h3>Past Campaigns</h3>
+      <table cTable [cBorder]="1" bordered hover striped class="styled-table">
+        <thead cTableColor="dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Link</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Campanhas Passadas Listadas Aqui -->
+          <tr>
+            <td scope="row">1</td>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>http:media.Doe</td>
+            <td class="status inactive">Inactive</td>
+            <td class="actions">
+              <svg [cIcon]="icons.cilPencil" size="lg" title="Edit"></svg>
+              <svg [cIcon]="icons.cilTrash" size="lg" title="Delete"></svg>
+            </td>
+          </tr>
+          <!-- Mais campanhas passadas -->
+             <!-- Campanhas Passadas Listadas Aqui -->
+          <tr>
+            <td scope="row">1</td>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>http:media.Doe</td>
+           <td class="status inactive">Inactive</td>
+      <td class="actions">
+        <svg [cIcon]="icons.cilPencil" size="lg" title="Edit"></svg>
+        <svg [cIcon]="icons.cilTrash" size="lg" title="Delete"></svg>
+      </td>
+          </tr>
+            <!-- Campanhas Passadas Listadas Aqui -->
+            <tr>
+              <td scope="row">1</td>
+              <td>Jane</td>
+              <td>Doe</td>
+              <td>http:media.Doe</td>
+              <td class="status inactive">Inactive</td>
+              <td class="actions">
+                <svg [cIcon]="icons.cilPencil" size="lg" title="Edit"></svg>
+                <svg [cIcon]="icons.cilTrash" size="lg" title="Delete"></svg>
+              </td>
+            </tr>
+              <!-- Campanhas Passadas Listadas Aqui -->
+          <tr>
+            <td scope="row">1</td>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>http:media.Doe</td>
+           <td class="status inactive">Inactive</td>
+      <td class="actions">
+        <svg [cIcon]="icons.cilPencil" size="lg" title="Edit"></svg>
+        <svg [cIcon]="icons.cilTrash" size="lg" title="Delete"></svg>
+      </td>
+          </tr>
+        </tbody>
+      </table>
+    </c-tab-panel>
+  </c-tabs-content>
+</c-tabs>
+
+
+
+<!-- <table cTable [cBorder]="1" bordered >
   <thead cTableColor="dark">
   <tr>
     <th scope="col">#</th>
     <th scope="col">Name</th>
+    <th scope="col">Brand</th>
+    <th scope="col">Link</th>
     <th scope="col">Status</th>
-    <th scope="col">Devices</th>
-    <th scope="col">Routes</th>
     <th scope="col">Actions</th>
   </tr>
   </thead>
@@ -20,8 +220,8 @@
     <td scope="row">1</td>
     <td>Mark</td>
     <td>Otto</td>
-    <td>Otto</td>
-    <td>&#64;mdo</td>
+    <td>http:media.Otto</td>
+    <td>Active</td>
     <td>
       <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
       <svg  [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
@@ -33,8 +233,8 @@
     <td scope="row">2</td>
     <td>Jacob</td>
     <td>Thornton</td>
-    <td>Otto</td>
-    <td>&#64;fat</td>
+    <td>http:media.Otto</td>
+    <td>Active</td>
     <td>
       <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
       <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
@@ -45,8 +245,8 @@
     <td scope="row">3</td>
     <td>Larry</td>
     <td>the Bird</td>
-    <td>Otto</td>
-    <td>&#64;twitter</td>
+    <td>http:media.Otto</td>
+    <td>Active</td>
     <td>
       <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
       <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
@@ -54,7 +254,7 @@
     </td>
   </tr>
   </tbody>
-</table>
+</table> -->
 
 
 
@@ -79,9 +279,43 @@
           placeholder="Campaign Name"
         />
       </c-col>
+      <c-col [md]="12">
+        <label cLabel for="Brand">Brand</label>
+        <input
+          cFormControl
+          id="Brand"
+          type="text"
+          name="Brand"
+          required="true"
+          placeholder="Brand"
+        />
+      </c-col>
+
+      <c-col [md]="12">
+        <label cLabel for="Link to website">Link to website </label>
+        <input
+          cFormControl
+          id="Link to website"
+          type="text"
+          name="Link to website"
+          required="true"
+          placeholder="Link to website"
+        />
+      </c-col>
+  
+      
+      <c-col [md]="12">
+      <select aria-label="Default select example" cSelect>
+        <option >Desired media plataforms</option>
+        <option value="1">static ooh</option>
+        <option value="2">DOOH</option>
+        <option value="3">taxi</option>
+        <option value="4">all</option>
+      </select>
+    </c-col>
       
       <!-- Descrição -->
-      <c-col [md]="12">
+      <!-- <c-col [md]="12">
         <label cLabel for="description">Description</label>
         <textarea
           cFormControl
@@ -91,28 +325,28 @@
           placeholder="Description"
         ></textarea>
       </c-col>
-      
+       -->
       <!-- Dispositivo Associado -->
-      <c-col [md]="6">
+      <!-- <c-col [md]="6">
         <label cLabel for="device">Device</label>
         <select cSelect id="device" name="device" required="true">
-          <option value="" disabled selected>Choose a device...</option>
+          <option value="" disabled selected>Choose a device...</option> -->
           <!-- Supondo que há uma lista de dispositivos no controlador -->
-          <option >Demo</option>
+          <!-- <option >Demo</option>
           <option >Demo1</option>
         </select>
-      </c-col>
+      </c-col> -->
 
       <!-- Rota Associada -->
-      <c-col [md]="6">
+      <!-- <c-col [md]="6">
         <label cLabel for="route">Route</label>
         <select cSelect id="route" name="route" required="true">
-          <option value="" disabled selected>Choose a route...</option>
+          <option value="" disabled selected>Choose a route...</option> -->
           <!-- Supondo que há uma lista de rotas no controlador -->
-          <option>Pretoria</option>
+          <!-- <option>Pretoria</option>
           <option>Gauteng</option>
         </select>
-      </c-col>
+      </c-col> -->
 
       <!-- Data de Início -->
       <c-col [md]="6">
@@ -139,7 +373,7 @@
       </c-col>
 
       <!-- Upload de Vídeo -->
-      <c-col [md]="12">
+      <!-- <c-col [md]="12">
         <label cLabel for="videoUpload">Upload de Vídeo</label>
         <input
           cFormControl
@@ -148,6 +382,18 @@
           accept="video/*"
       
           required="true"
+        />
+      </c-col> -->
+
+      <c-col [md]="12">
+        <label cLabel for="Link to website">Allocated budget for campaign</label>
+        <input
+          cFormControl
+          id="Link to website"
+          type="number"
+          name="Link to website"
+          required="true"
+          placeholder="Allocated budget for campaign"
         />
       </c-col>
 

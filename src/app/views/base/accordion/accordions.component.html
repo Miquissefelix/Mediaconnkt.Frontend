@@ -4,7 +4,7 @@
 </button>
 
 
-<table cTable [cBorder]="1" bordered >
+<table cTable [cBorder]="1" bordered hover striped class="styled-table" >
   <thead cTableColor="dark">
   <tr>
     <th scope="col">#</th>
@@ -18,7 +18,7 @@
   <tr>
     <td scope="row">1</td>
     <td>Mark</td>
-    <td>Active</td>
+    <td class="status active">Active</td>
     <td>
       <a
       routerLink="/base/breadcrumbs"
@@ -36,7 +36,7 @@
     </a>
   </td>
  
-    <td>
+    <td class="actions">
       <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
       <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
      
@@ -46,7 +46,7 @@
   <tr>
     <td scope="row">2</td>
     <td>Jacob</td>
-    <td>Inactive</td>
+    <td class="status inactive">Inactive</td>
     <td>
       <a
       routerLink="/base/breadcrumbs"
@@ -64,7 +64,7 @@
       Views Devices
     </a>
   </td>
-    <td>
+    <td class="actions">
       <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
       <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
      
@@ -73,7 +73,7 @@
   <tr>
     <td scope="row">3</td>
     <td>Larry</td>
-    <td>Active</td>
+    <td class="status active">Active</td>
     <td>
       <a
  
@@ -90,7 +90,7 @@
       Views Devices
     </a>
   </td>
-    <td>
+    <td class="actions">
       <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
       <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
      

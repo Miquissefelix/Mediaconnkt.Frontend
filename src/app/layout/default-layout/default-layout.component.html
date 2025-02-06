@@ -6,12 +6,28 @@
   id="sidebar1"
   visible
 >
-  <c-sidebar-header class="border-bottom">
-    <c-sidebar-brand [routerLink]="[]">
-      <h4>Mediaconnkt</h4>
+  
+    <c-sidebar-brand class="logo-image"
+      [brandFull]="{
+        src: 'assets/images/LogoMediaconnkt.io.png',
+        width:150,
+        height: 136,
+        alt: 'Logo'
+      }"
+
+      [brandNarrow]="{
+          src: 'assets/images/LogoMediaconnkt.io.png',
+          width:75,
+          height: 75,
+          alt: 'Logo'
+          
+      }"
+         routerLink="./"
+      />
+      <!-- <img src="./assets/images/Logo - mediaconnkt.io.png" alt="Logo" srcset="" /> -->
       
-    </c-sidebar-brand>
-  </c-sidebar-header>
+    
+
 
   <ng-scrollbar #scrollbar="ngScrollbar" (updated)="onScrollbarUpdate(scrollbar.state)" class="overflow" pointerEventsMethod="scrollbar" visibility="hover">
     <c-sidebar-nav #overflow [navItems]="navItems" dropdownMode="close" compact />

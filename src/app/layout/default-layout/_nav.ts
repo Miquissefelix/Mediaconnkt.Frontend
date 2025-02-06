@@ -48,7 +48,8 @@ export const navItems: INavData[] = [
         iconComponent: { name: 'cilMap' }
       },
     ]
-    }
+    },
+  
   // {
   //   name: 'Components',
   //   title: true

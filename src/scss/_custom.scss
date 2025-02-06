@@ -6,7 +6,9 @@
 // custom tweaks for scrollbar styling (wip)
 @import "scrollbar";
 
-
+// body{
+//   background: #e0ecbe;
+// }
 
  // custom calendar today cell color
 .calendar-cell.today {
@@ -21,48 +23,49 @@
 /* Sidebar - Títulos e Links */
 .sidebar-nav .nav-title, 
 .sidebar-nav .nav-link {
-  color: #fff; 
+  color: #e0ecbe; 
 }
 
 /* Ícones da Sidebar */
 .sidebar-nav svg.nav-icon {
-  color: #fff;
+  color: #e0ecbe;
 }
 
 /* Link Ativo - Destaque em Vermelho */
 .sidebar-nav .nav-link.active .nav-icon,
 .sidebar-nav .nav-link.active {
   font-weight: bold; 
-  color: #ff0000; 
+  color: #e0ecbe; 
 }
 
 /* Hover nos Links */
 .sidebar-nav .nav-link:hover {
-  color: #ff0000; 
+  color: #e0ecbe; 
   font-weight: bold; 
 }
 
 /* Fundo da Sidebar */
 .sidebar.sidebar-fixed {
-  background-color: #0a0a0af8; 
+  background-color: #1f2227; 
+  // background-color: #09422c; 
 }
 
 /* Header da Sidebar */
-.sidebar .sidebar-header {
-  background-color: #ff0000; 
-  color: #fff; 
-  border-bottom: 2px solid #000;
-}
+// .sidebar .sidebar-header {
+//   background-color: #09422c; 
+//   color: #fff; 
+//   border-bottom: 2px solid #000;
+// }
 
 /* Footer da Sidebar */
 .sidebar .sidebar-footer {
-  background-color: #0a0a0af8; 
-  color: #fff; 
+  background-color: #1f2227; 
+  color: #e0ecbe; 
 }
 
 /* Botão Toggle da Sidebar */
 button.c-sidebar-toggler {
-  background-color: #ff0000; 
+  background-color: crimson; 
   color: #fff; 
   border: none;
 }
@@ -74,25 +77,112 @@ button.c-sidebar-toggler {
 
 
 .btn-primary{
-  background-color: #ff0000; 
-  color: #ffffff; 
+   background-color: #71c59e; 
+  // background-color: #09422c; /* British Racing Green */
+   color: #1f2227; 
+  // color: #e0ecbe;
+  font-size: 16px;
+  font-weight: bold;
   border: none;
+  border-radius: 8px;
 }
 .btn-primary:hover{
-  background-color: #ffffff; 
-  color: #ff0000; 
-  border: 1px solid #ff0000; 
+  // background-color: #71c59e; /* Snake Eye (White) */
+  background-color: #e0ecbe;
+  color: #1f2227; 
+  // color: #09422c;
+  // background-color: #4d6b5c; 
+  // color: #ff0000; 
+  // border: 1px solid crimson; 
+}
+
+.modal-main{
+  background: rgba(0, 0, 0, 0.5); /* Fundo escuro transparente */
 }
 
 
 
 /* Cabeçalho da tabela */
 .table th {
-  border-color: #ff0000;
-  background-color: #ff0000; 
-
+  border-color: #09422c;
+  background-color: #09422c;
+  text-transform: uppercase; 
+   color: #e0ecbe;
 }
 
 
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
 
+.styled-table th, .styled-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+// .styled-table tbody td:nth-child(even) {
+//   background-color: #e0ecbe; /* Pale Spring Bud */
+// }
+
+.styled-table tbody td:hover {
+  // background-color: #71c59e; /* Snake Eye (White) nao esta funcionando */
+  cursor: pointer;
+}
+
+.status {
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 4px;
+  // text-align: center;
+}
+
+.status.active {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+}
+
+.status.inactive {
+  background-color: #d32f2f;
+  color: white;
+  text-align: center;
+}
+
+.actions svg {
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.actions svg:hover {
+  transform: scale(1.2);
+}
+
+.tabbutton .tablist{
+  gap: 0.5rem;
+}
+.tablist button{
+  background-color: #2b2f35;
+  color: #e0ecbe;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px 8px 0 0;
+}
+.tablist button:hover{
+  background-color: #09422c; /* British Racing Green */
+  color: #e0ecbe;
+  font-weight: bold;
+}
+
+// .tablist .active {
+//   background-color: #71c59e; /* Snake Eye (White) */
+//   color: #09422c; /* British Racing Green */
+//   font-weight: bold;
+//   border-bottom: 3px solid #09422c; /* Destaque inferior */
+// }
 

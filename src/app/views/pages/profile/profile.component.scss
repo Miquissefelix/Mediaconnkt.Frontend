@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Arial';
+}
+
+/* header */
+.header-inner-content{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* navbar */
+.navbar{
+    background-color:crimson ;
+    padding: 1rem;
+    position: sticky; 
+    top: 0;
+    box-shadow: 10px 0px 10px crimson;
+    z-index: 99;
+
+}
+
+.navbar>div{
+   display: flex;
+   align-items: center;
+   justify-content: space-between !important;
+   position: relative;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+nav ul li{
+   color: #fff;
+   margin-right: 1.5rem;
+
+}
+
+/* ao passar o mouse os li sobem pra cima */
+nav ul li:hover{
+    transform: translateY(-5px);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+
+
+.logo span{
+    color: #fff;
+}
+/* icon */
+
+.nav-icon-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-icon-container button{
+    cursor: pointer;
+    
+}
+
+/*btn*/
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .sign-in, .sign-up {
+    color: #fff;
+    border: 1px solid ;
+  }
+ 
+/* firstchild ira pegar a primeira imagem */
+.nav-icon-container img:first-child{
+    margin-right: 1rem;
+}
+
+.menu-btn{
+    display: none;
+}
+
+/* Header .gradient*/
+header{
+    background-image: radial-gradient(#fff, #c7c7c7);
+}
+.header-bottom-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.header-bottom-left{
+    height: 100%;
+    /* para dividir o espaco com o outro lado */
+    flex-basis: 50%;
+}
+.header-bottom-left h2{
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+   
+}
+
+.header-bottom-left p{
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-bottom-left button{
+    background-color: crimson;
+    border: none;
+    cursor: pointer;
+     /* cima,baixo 0.8rem */
+     /* esquerda direita 3.8rem */
+     padding: 0.8rem  3.8rem;
+     border-radius: 100px;
+     color: #fff;
+     font-weight: 500;
+     font-size: 1rem;
+
+}
+.header-bottom-left button:hover{
+  background-color: rgb(236, 11, 56);
+}
+
+.header-bottom-right{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transacao da cor mais lenta */
+    transition: all 0.2s;
+
+}
+
+.header-bottom-right img{
+    width: 100%;
+}

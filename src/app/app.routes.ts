@@ -78,6 +78,13 @@ export const routes: Routes = [
     }
   },
   {
+    path: 'profile',
+    loadComponent: () => import('./views/pages/profile/profile.component').then(m => m.ProfileComponent),
+    data: {
+      title: 'Profile Page'
+    }
+  },
+  {
     path: 'register',
     loadComponent: () => import('./views/pages/register/register.component').then(m => m.RegisterComponent),
     data: {

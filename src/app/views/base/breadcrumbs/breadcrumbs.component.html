@@ -4,8 +4,8 @@
 </button>
 
 
-<table cTable [cBorder]="1" bordered >
-  <thead cTableColor="dark">
+<table cTable [cBorder]="1" bordered hover striped class="styled-table" >
+  <thead >
   <tr>
     <th scope="col">#</th>
     <th scope="col">Name</th>
@@ -17,11 +17,11 @@
   </thead>
   <tbody>
   <tr>
-    <th scope="row">1</th>
+    <td scope="row">1</td>
     <td>Mark</td>
     <td>34562765</td>
     <td>Active</td>
-    <td>
+   <td class="actions">
       <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
       <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
      
@@ -29,22 +29,22 @@
    
   </tr>
   <tr>
-    <th scope="row">2</th>
+    <td scope="row">2</td>
     <td>Jacob</td>
     <td>6437653425</td>
     <td>Inactive</td>
-    <td>
+   <td class="actions">
       <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
       <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
      
     </td>
   </tr>
   <tr>
-    <th scope="row">3</th>
+    <td scope="row">3</td>
     <td>Larry</td>
     <td>85766534</td>
     <td>Active</td>
-    <td>
+   <td class="actions">
       <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
       <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
      

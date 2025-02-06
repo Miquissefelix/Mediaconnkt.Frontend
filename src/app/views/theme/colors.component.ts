@@ -11,11 +11,11 @@ import { AccordionComponent, AccordionItemComponent, TemplateIdDirective, Accord
 import { FormsModule,NgForm,ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FormModule } from '@coreui/angular';
-
+import { Tabs2Module } from '@coreui/angular';
 @Component({
     templateUrl: 'colors.component.html',
     standalone: true,
-    imports: [TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, RowComponent,TableModule, UtilitiesModule,ModalModule,ColComponent,IconDirective,AccordionComponent, AccordionItemComponent, TemplateIdDirective, AccordionButtonDirective, BgColorDirective, FormCheckComponent, ButtonDirective,ButtonModule,AlertComponent,FormsModule,ReactiveFormsModule,FormModule, forwardRef(() => ThemeColorComponent)]
+    imports: [Tabs2Module,TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, RowComponent,TableModule, UtilitiesModule,ModalModule,ColComponent,IconDirective,AccordionComponent, AccordionItemComponent, TemplateIdDirective, AccordionButtonDirective, BgColorDirective, FormCheckComponent, ButtonDirective,ButtonModule,AlertComponent,FormsModule,ReactiveFormsModule,FormModule, forwardRef(() => ThemeColorComponent)]
 })
 export class ColorsComponent implements OnInit, AfterViewInit {
   icons = {

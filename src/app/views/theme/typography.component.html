@@ -4,8 +4,8 @@
 </button>
 
 
-<table cTable [cBorder]="1" bordered >
-  <thead cTableColor="dark">
+<table cTable [cBorder]="1" bordered hover striped class="styled-table">
+  <thead>
   <tr>
     <th scope="col">#</th>
     <th scope="col">Name</th>
@@ -22,8 +22,8 @@
     <td>Mark</td>
     <td>34562765</td>
     <td>Pretoria</td>
-    <td>Active</td>
-    <td>
+    <td class="status active">Active</td>
+    <td class="actions">
       <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
       <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
      
@@ -35,8 +35,8 @@
     <td>Jacob</td>
     <td>6437653425</td>
     <td>Gauteng</td>
-    <td>Inactive</td>
-    <td>
+    <td class="status inactive">Inactive</td>
+    <td class="actions">
       <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
       <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
      
@@ -47,8 +47,8 @@
     <td>Larry</td>
     <td>85766534</td>
     <td>Pretoria</td>
-    <td>Active</td>
-    <td>
+    <td class="status active">Active</td>
+    <td class="actions">
       <svg [cIcon]="icons.cilPencil" size="lg" title="List Icon"></svg>
       <svg [cIcon]="icons.cilTrash" size="lg" title="List Icon"></svg>
      
@@ -61,7 +61,7 @@
 
 <!-- form -->
 
-<c-modal #verticallyCenteredModal alignment="center" id="verticallyCenteredModal" >
+<c-modal #verticallyCenteredModal alignment="center" id="verticallyCenteredModal" class="modal-main" >
   <c-modal-header>
     <h5 cModalTitle>Add New Device</h5>
     <button [cModalToggle]="verticallyCenteredModal.id" cButtonClose></button>
