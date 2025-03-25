@@ -9,7 +9,9 @@
 // body{
 //   background: #e0ecbe;
 // }
-
+*{
+  scroll-behavior: smooth;
+}
  // custom calendar today cell color
 .calendar-cell.today {
   --cui-calendar-cell-today-color: var(--cui-info) !important;
