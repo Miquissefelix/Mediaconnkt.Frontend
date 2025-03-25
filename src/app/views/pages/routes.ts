@@ -31,6 +31,13 @@ export const routes: Routes = [
     }
   },
   {
+    path: 'portfolio',
+    loadComponent: () => import('./portfolio/portfolio.component').then(m => m.PortfolioComponent),
+    data: {
+      title: 'Portfolio'
+    }
+  },
+  {
     path: 'reports',
     loadComponent: () => import('./reports/reports.component').then(m => m.ReportsComponent),
     data: {
